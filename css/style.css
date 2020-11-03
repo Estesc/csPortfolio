@@ -1,0 +1,190 @@
+/*
+--------------------------------------
+Table of contents
+1. menu
+2. page layout with flex box
+3. text and image format classes
+4. js file fomatting
+--------------------------------------
+*/
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(202, 58, 58, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+body {
+  background-color: #1F1D26;
+}
+
+/*menu*/
+#bannerimg {
+    width: 100%;
+    height: 100%;
+}
+
+#main-nav {
+  margin-top: 2px;
+}
+
+#main-nav a {
+  color: #f6f7f8;
+  background: #3D3F49;
+  height: 64px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+}
+
+#main-nav a:hover {
+background: #3D3F49;
+}
+
+#main-nav ul {
+list-style: none;
+display: flex;
+}
+
+#main-nav li {
+width: 100%;
+text-align: center;
+position: relative;
+}
+
+#main-nav li:hover .submenu > li {
+display: block;
+flex-direction: column;
+top: 0px;
+}
+
+.submenu li {
+display: none;
+position: absolute;
+top: 0px;
+}
+
+.submenu {
+display: flex;
+flex-direction: column;
+position: absolute;
+width: 100%;
+}
+
+.submenu li {
+position: relative;
+}
+
+.submenu li:hover .submenu-2 li {
+display: block;
+}
+
+.submenu-2 li {
+display: none;
+}
+
+.submenu-2 {
+display: flex;
+flex-direction: column;
+position: absolute;
+top: 0px;
+left: 75%;
+width: 250px;
+}
+
+.arrow {
+margin-left: 8px;
+color: #eee;
+font-size: 12px;
+}
+
+
+/*page layout with flexbox*/
+.flexbox-container {
+    display: flex;
+    border: 5px solid #000000;
+    margin-bottom: 20px;
+    align-content: space-around;
+
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 5px;
+    padding: 10px;
+    border: 3px solid #333;
+    background-color: #DFE9EE;
+}
+
+.flexbox-item-1 {
+    color: white;
+    min-height: 150px;
+    background-color:#152B59;
+    font-family: ubuntu;
+    align-content: center;
+    flex: 1;
+    font-size: 20px;
+}
+
+.flexbox-item-2 {
+    color: white;
+    min-height: 150px;
+    background-color:#3365A6;
+    flex: 1;
+    align-self: center;
+    font-size: 30px;
+}
+
+.flexbox-item-3 {
+    color: white;
+    background-color:#64758C;
+    font-size: 20px;
+    flex: 1;
+    min-height: 300px;
+    width: 300px;
+}
+
+.flexbox-item-4 {
+    align-items: flex-end;
+    color: white;
+    background-color:#64758C;
+    font-size: 20px;
+    flex: 1;
+    min-height: 300px;
+    width: 300px;
+    font-family: 'Notable', sans-serif;
+}
+.another-container {
+    display: flex;
+    color: white;
+    border: 5px solid #000000;
+    align-content: space-around;
+    padding: 40px;
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 28px;
+}
+
+/*js file formatting*/
+canvas {
+    border: thin solid #1F1D26;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+}
